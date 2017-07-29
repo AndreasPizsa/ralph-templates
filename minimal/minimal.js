@@ -1,10 +1,10 @@
-$('console').append('Hi!');
+$('console').append('Hi!')
 console.log = console.error = console.debug = function() {
   const $console = $('#console');
   $console.append.apply($console, arguments);
 }
 
-if(typeof _pjscMeta === 'undefined') _pjscMeta = {};
+if(typeof _pjscMeta === 'undefined') var _pjscMeta = {};
 _pjscMeta.manualWait=true;
 
 (function parseWindowLocationQuery(){
@@ -63,6 +63,7 @@ $(function(){
 
     const starsCount = Math.round(5 * (reviewResponse.data.rating.value / reviewResponse.data.rating.scale), 0);
     const stars = $('.star');
+    let i;
     for(i=4;i>=starsCount;i--) $(stars[i]).css('opacity', 0.5);
 
     $('#reviewer_image').css('background-image', `url(${reviewerResponse.picture.data.url})`);
