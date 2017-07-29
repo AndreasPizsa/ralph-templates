@@ -11,11 +11,12 @@
 })();
 
 $(function(){
-//	const {access_token, review_id} = window.location.query;
-  const { access_token, review_id } = {
+	const {access_token, review_id} = window.location.query;
+/*  const { access_token, review_id } = {
 		access_token:'EAADKatZCjwx4BAGOE2MYfqUUdokR1H0l7gVwittZCXYcU7cuZAhOC4PvseHWevleZBToQG9dWY399Izbs4mzZAr9DTZBjYHbanAiPE65UzZBUvZAYb0p4q3HX3YjtyHlgNyPNTGzLs3UZAuAmShyVELZB5nngCZBOOvWAH5VZC3kI57uzURfBAVXnKp1hxoIod2tgJMZD',
   	review_id: '10207589089067908'
   };
+*/
 
   const batch = JSON.stringify([{
   	name: 'review',
