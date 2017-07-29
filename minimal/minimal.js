@@ -1,7 +1,8 @@
-$('console').append('Hi!')
+$('#console').append('Hi!')
 console.log = console.error = console.debug = function() {
   const $console = $('#console');
   $console.append.apply($console, arguments);
+  $console.append('\n');
 }
 
 if(typeof _pjscMeta === 'undefined') var _pjscMeta = {};
