@@ -5,8 +5,7 @@ console.log = console.error = console.debug = function() {
   $console.append('\n');
 }
 
-if(typeof _pjscMeta === 'undefined') var _pjscMeta = {};
-_pjscMeta.manualWait=true;
+if(typeof(_pjscMeta) !== 'undefined') _pjscMeta.manualWait=true;
 
 (function parseWindowLocationQuery(){
   var d=decodeURIComponent,
@@ -78,6 +77,8 @@ $(function(){
   .catch(console.error.bind(console))
 
   .always(function(){
+    if(typeof(_pjscMeta) === 'undefined') return;
+
     _pjscMeta.optionsOverrides = _pjscMeta.optionsOverrides || {};
     _pjscMeta.optionsOverrides.clipRectangle = {
       top:    0,
