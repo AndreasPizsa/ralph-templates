@@ -1,3 +1,9 @@
+$('console').append('Hi!');
+console.log = console.error = console.debug = function() {
+  const $console = $('#console');
+  $console.append.apply($console, arguments);
+}
+
 if(typeof _pjscMeta === 'undefined') _pjscMeta = {};
 _pjscMeta.manualWait=true;
 
