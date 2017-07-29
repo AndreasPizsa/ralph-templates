@@ -1,15 +1,25 @@
 
 @import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=f5de96a4-1e22-43c6-826d-7264562d62b7");
-
     @font-face{
-        font-family:"Helvetica";
-        font-weight: normal;
-        src:url("Fonts/706ec8e5-fe4a-4518-91a6-7aba4d3d333f.eot?#iefix");
-        src:url("Fonts/706ec8e5-fe4a-4518-91a6-7aba4d3d333f.eot?#iefix") format("eot"),url("Fonts/dc50c02f-3f77-4e75-b89c-e3f9bb4752e6.woff2") format("woff2"),url("Fonts/ce6f5b38-1cb5-4a27-8182-583aa68b2436.woff") format("woff"),url("Fonts/ff06cde7-e06a-4cf0-af4d-5b2f737bf544.ttf") format("truetype"),url("Fonts/958b12cf-2908-4254-8cb9-9b12c3aa151e.svg#958b12cf-2908-4254-8cb9-9b12c3aa151e") format("svg");
+        font-family:"Helvetica Neue LT W01_55 Roman";
+        src:url("Fonts/bf7ef4ce-de2a-4213-a9d7-826a3ee323cd.eot?#iefix");
+        src:url("Fonts/bf7ef4ce-de2a-4213-a9d7-826a3ee323cd.eot?#iefix") format("eot"),url("Fonts/3dac71eb-afa7-4c80-97f0-599202772905.woff2") format("woff2"),url("Fonts/34e0e4c0-c294-49bb-9a8e-1b2cafd54e32.woff") format("woff"),url("Fonts/8a8bfee3-197c-4942-9b11-71508cc9f406.ttf") format("truetype"),url("Fonts/5101995a-e73b-4cf9-84e8-f99eb43277b1.svg#5101995a-e73b-4cf9-84e8-f99eb43277b1") format("svg");
     }
     @font-face{
-        font-family:"Helvetica";
-        font-weight: bold;
-        src:url("Fonts/a95d2895-fa71-4ce7-bc1e-631169924be3.eot?#iefix");
-        src:url("Fonts/a95d2895-fa71-4ce7-bc1e-631169924be3.eot?#iefix") format("eot"),url("Fonts/6dfa3ef5-ebc5-4d23-a631-b3d746c2ad39.woff2") format("woff2"),url("Fonts/588c9ba8-1d28-4ad6-bf18-7128152d84c4.woff") format("woff"),url("Fonts/55334dfb-9c72-4147-8de0-21239f17ff25.ttf") format("truetype"),url("Fonts/62455047-c81f-44f1-8938-7739fa0f0e8d.svg#62455047-c81f-44f1-8938-7739fa0f0e8d") format("svg");
+        font-family:"Helvetica Neue LT W01_71488914";
+        src:url("Fonts/8a6c3e5a-88a5-430c-91d8-7767ce971d12.eot?#iefix");
+        src:url("Fonts/8a6c3e5a-88a5-430c-91d8-7767ce971d12.eot?#iefix") format("eot"),url("Fonts/531c5a28-5575-4f58-96d4-a80f7b702d7b.woff2") format("woff2"),url("Fonts/439c5962-f9fe-4eaf-a1f6-f41d42edba75.woff") format("woff"),url("Fonts/419a308d-b777-4f84-9235-2caf4a98ec23.ttf") format("truetype"),url("Fonts/e4d5b881-6835-45b7-8766-3e5b9e7cab8b.svg#e4d5b881-6835-45b7-8766-3e5b9e7cab8b") format("svg");
+    }
+
+    @font-face{
+        font-family:"HelveticaNeue";
+        font-weight: normal;
+        src:url("Fonts/bf7ef4ce-de2a-4213-a9d7-826a3ee323cd.eot?#iefix");
+        src:url("Fonts/bf7ef4ce-de2a-4213-a9d7-826a3ee323cd.eot?#iefix") format("eot"),url("Fonts/3dac71eb-afa7-4c80-97f0-599202772905.woff2") format("woff2"),url("Fonts/34e0e4c0-c294-49bb-9a8e-1b2cafd54e32.woff") format("woff"),url("Fonts/8a8bfee3-197c-4942-9b11-71508cc9f406.ttf") format("truetype"),url("Fonts/5101995a-e73b-4cf9-84e8-f99eb43277b1.svg#5101995a-e73b-4cf9-84e8-f99eb43277b1") format("svg");
+    }
+    @font-face{
+        font-family:"HelveticaNeue";
+        font-weight: 500;
+        src:url("Fonts/8a6c3e5a-88a5-430c-91d8-7767ce971d12.eot?#iefix");
+        src:url("Fonts/8a6c3e5a-88a5-430c-91d8-7767ce971d12.eot?#iefix") format("eot"),url("Fonts/531c5a28-5575-4f58-96d4-a80f7b702d7b.woff2") format("woff2"),url("Fonts/439c5962-f9fe-4eaf-a1f6-f41d42edba75.woff") format("woff"),url("Fonts/419a308d-b777-4f84-9235-2caf4a98ec23.ttf") format("truetype"),url("Fonts/e4d5b881-6835-45b7-8766-3e5b9e7cab8b.svg#e4d5b881-6835-45b7-8766-3e5b9e7cab8b") format("svg");
     }
