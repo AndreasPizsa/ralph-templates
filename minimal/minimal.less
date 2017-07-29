@@ -1,0 +1,82 @@
+@font-size: 18px;
+@line-height: 1.4;
+@lines-to-show: 4;
+
+html {
+  background: silver;
+}
+
+body {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.star {
+  color: #F39017;
+}
+
+#reviewer_image {
+  border-radius: 999px;
+  width: 2em;
+  height:2em;
+  background-size: cover;
+  background-position: center center;
+  margin: auto;
+}
+
+#page_image {
+  width: 2.4em;
+  height:2.4em;
+  background-size: cover;
+  background-position: center center;
+  margin: auto;
+}
+
+#review_text {
+  font-size: @font-size;
+  line-height: @line-height;
+
+  height: @font-size*@line-height*@lines-to-show; /* Fallback for non-webkit */
+
+  x-max-width: 300px;
+
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+
+  margin: 0 auto;
+
+  -webkit-line-clamp: @lines-to-show;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  border: none;
+}
+
+#review_text:before {
+  display: inline;
+  content: '“';
+}
+
+#review_text:after {
+  display: inline;
+  content: '”';
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 1em;
+  left: 0;
+}
+
+table#page {
+  margin: auto;
+}
+
+table#page .place-name,
+table#page .place-category {
+  padding-left: 1ex;
+}
