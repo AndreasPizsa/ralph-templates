@@ -5,7 +5,11 @@ console.log = console.error = console.debug = function() {
   $console.append('\n');
 }
 
-if(typeof(_pjscMeta) !== 'undefined') _pjscMeta.manualWait=true;
+if(typeof(_pjscMeta) !== 'undefined') {
+  _pjscMeta.manualWait=true;
+  console.log('_pjscMeta DEFINED');
+}
+else console.log('_pjscMeta undefined');
 
 (function parseWindowLocationQuery(){
   var d=decodeURIComponent,
@@ -78,14 +82,15 @@ $(function(){
 
   .always(function(){
     if(typeof(_pjscMeta) === 'undefined') return;
-
-    _pjscMeta.optionsOverrides = _pjscMeta.optionsOverrides || {};
+    console.log($('body').outerWidth());
+    console.log($('body').outerHeight());
     _pjscMeta.optionsOverrides.clipRectangle = {
       top:    0,
       left:   0,
-      width:  $('body').outerWidth(),
-      height: $('body').outerHeight()
+      width:  $('body').outerWidth() * 2,
+      height: $('body').outerHeight() * 2
     };
+
     _pjscMeta.manualWait=false;
   })
 
