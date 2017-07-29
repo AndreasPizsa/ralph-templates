@@ -1,3 +1,6 @@
+if(typeof _pjscMeta === 'undefined') _pjscMeta = {};
+_pjscMeta.manualWait=true;
+
 (function parseWindowLocationQuery(){
   var d=decodeURIComponent,
       l=window.location,
@@ -45,6 +48,7 @@ $(function(){
       batch
     }
   })
+
   .done( ([ reviewResponse, reviewerResponse, placeResponse]) => {
   	reviewResponse   = JSON.parse(reviewResponse.body);
     reviewerResponse = JSON.parse(reviewerResponse.body)[reviewResponse.from.id];
@@ -62,6 +66,18 @@ $(function(){
     $('.place-name').text(placeResponse.name);
     $('.place-category').text(placeResponse.category);
   })
-  .catch(console.error.bind(console));
+
+  .catch(console.error.bind(console))
+
+  .always(function(){
+    _pjscMeta.optionsOverrides = _pjscMeta.optionsOverrides || {};
+    _pjscMeta.optionsOverrides.clipRectangle = {
+      top:    0,
+      left:   0,
+      width:  $('body').outerWidth(),
+      height: $('body').outerHeight()
+    };
+    _pjscMeta.manualWait=false;
+  })
 
 });
