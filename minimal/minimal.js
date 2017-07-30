@@ -72,10 +72,13 @@ $(function(){
 
     $('#reviewer_image').css('background-image', `url(${reviewerResponse.picture.data.url})`);
     $('#reviewer_name').text(reviewerResponse.name);
-    $('#review_text').text(reviewResponse.data.review_text);
+    $('#review_text > span').text(reviewResponse.data.review_text);
+    $('#review_text').textfill();
     $('#page_image').css('background-image', `url(${placeResponse.picture.data.url})`);
     $('.place-name').text(placeResponse.name);
     $('.place-category').text(placeResponse.category);
+
+
   })
 
   .catch(console.error.bind(console))

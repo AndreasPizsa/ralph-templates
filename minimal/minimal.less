@@ -1,6 +1,6 @@
 @font-size: 18px;
 @line-height: 1.4;
-@lines-to-show: 4;
+@lines-to-show: 9;
 
 html {
   background: silver;
@@ -15,14 +15,18 @@ body {
   font-family: "Helvetica Neue LT W01_55 Roman";
 }
 
-h4 {
+h3, h4 {
   font-family: "Helvetica Neue LT W01_71488914";
 }
 
+#stars {
+  margin-bottom: 0;
+}
+
 .star {
-  font-family: "Helvetica Neue LT W01_71488914";
-  font-weight: bold;
   color: #F39017;
+  font-family: "ITCZapfDingbatsW95-Medi";
+  font-size: 32px;
 }
 
 #reviewer_image {
@@ -46,7 +50,7 @@ h4 {
   font-size: @font-size;
   line-height: @line-height;
 
-  height: @font-size*@line-height*@lines-to-show; /* Fallback for non-webkit */
+  height: 238px; //@font-size*@line-height*@lines-to-show; /* Fallback for non-webkit */
 
   x-max-width: 300px;
 
@@ -62,14 +66,15 @@ h4 {
   text-overflow: ellipsis;
 
   border: none;
+  color: #777;
 }
 
-#review_text:before {
+#review_text > span:before {
   display: inline;
   content: '“';
 }
 
-#review_text:after {
+#review_text > span:after {
   display: inline;
   content: '”';
 }
