@@ -66,7 +66,7 @@ $(function(){
     for(i=4;i>=starsCount;i--) $(stars[i]).css('opacity', 0.5);
 
     function shortenText(text) {
-      return text.match(/^.{0,160}[\wÄ-üÀ-ž]{0,17}/m).replace(/\s{2,}/,' ').trim()
+      return text.match(/^.{0,160}[\wÄ-üÀ-ž]{0,17}/m)[0].replace(/\s{2,}/,' ').trim()
     }
 
     $('#reviewer_image').css('background-image', `url(${reviewerResponse.picture.data.url})`);
@@ -76,13 +76,18 @@ $(function(){
     $('#page_image').css('background-image', `url(${placeResponse.picture.data.url})`);
     $('.place-name').text(placeResponse.name);
     $('.place-category').text(placeResponse.category);
-
-
   })
 
   .catch(console.error.bind(console))
 
   .always(function(){
+
+    window.setTimeout(function(){
+      $('body').append('<div id="done">')
+    }, 1000)
+
+
+
     if(typeof(_pjscMeta) === 'undefined') return;
     console.log($('body').outerWidth());
     console.log($('body').outerHeight());
@@ -94,7 +99,6 @@ $(function(){
     };
 
     _pjscMeta.manualWait=false;
-    $('body').append('<div id="done">');
   })
 
 });
