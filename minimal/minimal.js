@@ -25,11 +25,6 @@ else console.log('_pjscMeta undefined');
 
 $(function(){
 	const {access_token, review_id} = window.location.query;
-/*  const { access_token, review_id } = {
-		access_token:'EAADKatZCjwx4BAGOE2MYfqUUdokR1H0l7gVwittZCXYcU7cuZAhOC4PvseHWevleZBToQG9dWY399Izbs4mzZAr9DTZBjYHbanAiPE65UzZBUvZAYb0p4q3HX3YjtyHlgNyPNTGzLs3UZAuAmShyVELZB5nngCZBOOvWAH5VZC3kI57uzURfBAVXnKp1hxoIod2tgJMZD',
-  	review_id: '10207589089067908'
-  };
-*/
 
   const batch = JSON.stringify([{
   	name: 'review',
@@ -70,9 +65,13 @@ $(function(){
     let i;
     for(i=4;i>=starsCount;i--) $(stars[i]).css('opacity', 0.5);
 
+    function shortenText(text) {
+      return text.match(/^.{0,160}[\wÄ-üÀ-ž]{0,17}/m).replace(/\s{2,}/,' ').trim()
+    }
+
     $('#reviewer_image').css('background-image', `url(${reviewerResponse.picture.data.url})`);
     $('#reviewer_name').text(reviewerResponse.name);
-    $('#review_text > span').text(reviewResponse.data.review_text);
+    $('#review_text > span').text(shortenText(reviewResponse.data.review_text));
     $('#review_text').textfill();
     $('#page_image').css('background-image', `url(${placeResponse.picture.data.url})`);
     $('.place-name').text(placeResponse.name);
@@ -95,6 +94,7 @@ $(function(){
     };
 
     _pjscMeta.manualWait=false;
+    $('body').append('<div id="done">');
   })
 
 });
