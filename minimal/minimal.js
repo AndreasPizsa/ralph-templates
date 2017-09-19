@@ -24,7 +24,7 @@ else console.log('_pjscMeta undefined');
 })();
 
 $(function(){
-	const {access_token, review_id} = window.location.query;
+	const { access_token, review_id, done } = window.location.query;
 
   const batch = JSON.stringify([{
   	name: 'review',
@@ -83,7 +83,7 @@ $(function(){
   .always(function(){
 
     window.setTimeout(function(){
-      $('body').append('<div id="done">')
+      $('body').append(`<div id="${ done || 'done' }">`)
     }, 1000)
 
 
